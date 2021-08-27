@@ -18,7 +18,7 @@ function Routes() {
       <Route exact path="/" component={ Login } />
       <Route exact path="/explorar" component={ Explorer } />
       <Route exact path="/explorar/bebidas" component={ ExplorerDrinks } />
-      <Route path="/explorar/bebidas/:id" component={ SurpriseDrink } />
+      {/* <Route path="/explorar/bebidas/:id" component={ SurpriseDrink } /> */}
       {/* <Route exact path="/comidas" component={ Foods } /> */}
       {/* <Route exact path="/bebidas" component={ Drinks } /> */}
       {/* <Route path="/comidas/:id" component={ OneRecept } /> */}

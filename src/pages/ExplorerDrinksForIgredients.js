@@ -5,6 +5,7 @@ import FooterMenu from '../components/FooterMenu';
 function ExplorerDrinksForIngredients() {
   const forceLimit = 12;
   const [myIgredients, setMyIgredients] = useState('');
+  const [image, setImage] = useState('');
 
   useEffect(() => {
     try {
@@ -21,6 +22,30 @@ function ExplorerDrinksForIngredients() {
         console.log(ingredientsBase);
       };
       getIgredientDrink();
+    } catch (error) {
+      // console.log(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    try {
+      const URL = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${myIgredients}`;
+      console.log(myIgredients);
+      const getImageIngredent = async () => {
+        const requestImageIgredient = await fetch(URL);
+        const response = await requestImageIgredient.json();
+        console.log(response);
+        const { drinks } = response;
+        console.log(drinks);
+        const base = drinks.map((drink) => (drink.strDrinkThumb));
+        console.log(drinks);
+        const imageBase = base.slice(0, forceLimit);
+        setImage(
+          imageBase,
+        );
+        console.log(imageBase);
+      };
+      getImageIngredent();
     } catch (error) {
       // console.log(error);
     }

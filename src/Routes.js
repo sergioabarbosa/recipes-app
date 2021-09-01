@@ -15,6 +15,7 @@ import ExplorerFoods from './pages/ExplorerFoods';
 import Ingredients from './pages/Ingredients';
 import OriginExplorer from './pages/OriginExplorer';
 import MakedRecipes from './pages/MakedRecipes';
+import ExplorerDrinksForIngredients from './pages/ExplorerDrinksForIgredients';
 
 function Routes() {
   return (
@@ -27,7 +28,7 @@ function Routes() {
       <Route exact path="/perfil" component={ Profile } />
       <Route exact path="/explorar" component={ Explorer } />
       <Route exact path="/explorar/bebidas" component={ ExplorerDrinks } />
-      <Route exact path="/explorar/bebidas/ingredientes" component={ Ingredients } />
+      <Route exact path="/explorar/bebidas/ingredientes" component={ ExplorerDrinksForIngredients } />
       <Route exact path="/explorar/comidas" component={ ExplorerFoods } />
       <Route exact path="/explorar/comidas/ingredientes" component={ Ingredients } />
       <Route exact path="/explorar/comidas/area" component={ OriginExplorer } />

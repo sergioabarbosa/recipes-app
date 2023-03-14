@@ -1,1 +1,1 @@
-##Seja bem-vindo ao projeto APp de Receitas!
+##Seja bem-vindo ao projeto APP de Receitas!
